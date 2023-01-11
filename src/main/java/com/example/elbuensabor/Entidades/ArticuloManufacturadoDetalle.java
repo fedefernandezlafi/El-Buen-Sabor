@@ -18,4 +18,7 @@ public class ArticuloManufacturadoDetalle {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    private double cantidad;
+    private String unidadMedida;
+
 }
