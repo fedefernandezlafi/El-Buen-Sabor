@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class PedidoMapper {
 
     private ModelMapper mapper = new ModelMapper ();
-    public Pedido dtoAEntidad (PedidoDTO dto) {
+    public Pedido DTOaEntidad (PedidoDTO dto) {
         return Pedido.builder()
                 .fecha(dto.getFecha())
                 .numero(dto.getNumero())
@@ -32,12 +32,12 @@ public class PedidoMapper {
                 .build() ;
     }
 
-    public List<Pedido> dtosAEntidades (List<PedidoDTO> dtos) {
+    public List<Pedido> DTOaEntidades (List<PedidoDTO> dtos) {
         return dtos.stream().map(entidades -> mapper.map(dtos, Pedido.class))
                 .collect(Collectors.toList());
     }
 
-    public List<PedidoDTO> entidadesADTOs (List<Pedido> entidades) {
+    public List<PedidoDTO> entidadesADTO (List<Pedido> entidades) {
         return entidades.stream().map(dtos -> mapper.map(entidades, PedidoDTO.class))
                 .collect(Collectors.toList());
     }

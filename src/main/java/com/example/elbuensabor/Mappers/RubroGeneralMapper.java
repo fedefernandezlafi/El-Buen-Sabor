@@ -13,13 +13,10 @@ import java.util.stream.Collectors;
 public class RubroGeneralMapper {
 
     private ModelMapper mapper = new ModelMapper();
-    private final RubroGeneralRepositorio rubroGeneralRepositorio;
+    private RubroGeneralRepositorio rubroGeneralRepositorio;
 
-    public RubroGeneralMapper(RubroGeneralRepositorio rubroGeneralRepositorio) {
-        this.rubroGeneralRepositorio = rubroGeneralRepositorio;
-    }
 
-    public RubroGeneral dtoAEntidad(RubroGeneralDTO dto){
+    public RubroGeneral DTOaEntidad(RubroGeneralDTO dto){
         return RubroGeneral.builder()
                 .denominacion(dto.getDenominacion())
                 .build();
@@ -31,17 +28,13 @@ public class RubroGeneralMapper {
                 .build();
     }
 
-    public List<RubroGeneral> dtosAEntidades (List<RubroGeneralDTO> dtos) {
-        return dtos.stream().map(entidades -> mapper.map(dtos, RubroGeneral.class))
-                .collect(Collectors.toList());
-    }
 
-    public List<RubroGeneralDTO> entidadesadtos(List<RubroGeneral> entidades) {
+    public List<RubroGeneralDTO> entidadesADTO(List<RubroGeneral> entidades) {
         return entidades.stream().map(dtos -> mapper.map(entidades, RubroGeneralDTO.class))
                 .collect(Collectors.toList());
     }
 
-    public List<RubroGeneral> dtosAEntidades (List<RubroGeneralDTO> dtos) {
+    public List<RubroGeneral> DTOaEntidades (List<RubroGeneralDTO> dtos) {
         return (dtos.stream().map(entidades -> mapper.map(dtos, RubroGeneral.class))
                 .collect(Collectors.toList()));
     }

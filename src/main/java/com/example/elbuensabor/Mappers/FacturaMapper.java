@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class FacturaMapper {
     private ModelMapper mapper = new ModelMapper();
 
-    public Factura dtoAEntidad (FacturaDTO dto) {
+    public Factura DTOaEntidad (FacturaDTO dto) {
         return Factura.builder()
                 .fecha(dto.getFecha())
                 .formaPago(dto.getFormaPago())
@@ -36,7 +36,7 @@ public class FacturaMapper {
                 .build();
     }
 
-    public List <Factura> dtosAEntidad (List<FacturaDTO> dtos) {
+    public List <Factura> DTOaEntidades (List<FacturaDTO> dtos) {
         return dtos.stream().map(entidades -> mapper.map(entidades, Factura.class))
                 .collect(Collectors.toList());
     }

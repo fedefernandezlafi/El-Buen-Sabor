@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class RubroArticuloMapper {
     private ModelMapper mapper = new ModelMapper();
 
-    public RubroArticulo dtoAEntidad (RubroArticuloDTO dto) {
+    public RubroArticulo DTOaEntidad (RubroArticuloDTO dto) {
         return RubroArticulo.builder()
                 .denominacion(dto.getDenominacion())
                 .build();
@@ -23,12 +23,12 @@ public class RubroArticuloMapper {
                 .build();
     }
 
-    public List<RubroArticulo> dtosAEntidades (List <RubroArticuloDTO> dtos) {
+    public List<RubroArticulo> DTOaEntidades (List <RubroArticuloDTO> dtos) {
         return dtos.stream().map(entidades -> mapper.map(dtos, RubroArticulo.class))
                 .collect(Collectors.toList());
     }
 
-    public List<RubroArticuloDTO> entidadesADtos (List <RubroArticulo> entidades) {
+    public List<RubroArticuloDTO> entidadesADTO (List <RubroArticulo> entidades) {
         return entidades.stream().map(dto -> mapper.map(entidades, RubroArticuloDTO.class))
                 .collect(Collectors.toList());
     }

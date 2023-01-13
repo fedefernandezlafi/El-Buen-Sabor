@@ -14,7 +14,7 @@ public class DomicilioMapper {
 
     private ModelMapper mapper = new ModelMapper();
 
-    public Domicilio dtoAEntidad(DomicilioDTO dto) {
+    public Domicilio DTOaEntidad(DomicilioDTO dto) {
         return Domicilio.builder()
                 .calle(dto.getCalle())
                 .numero(dto.getNumero())
@@ -30,12 +30,12 @@ public class DomicilioMapper {
                 .build();
     }
 
-    public List<Domicilio> dtosAEntidades(List<DomicilioDTO> dtos) {
+    public List<Domicilio> DTOaEntidades(List<DomicilioDTO> dtos) {
         return dtos.stream().map(entidades -> mapper.map(entidades, Domicilio.class))
                 .collect(Collectors.toList());
     }
 
-    public List<DomicilioDTO> entidadesADTOs(List<Domicilio> entidades) {
+    public List<DomicilioDTO> entidadesADTO(List<Domicilio> entidades) {
         return entidades.stream().map(dtos -> mapper.map(dtos, DomicilioDTO.class))
                 .collect(Collectors.toList());
     }

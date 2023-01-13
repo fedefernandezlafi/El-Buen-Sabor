@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 public class UsuarioMapper {
     private ModelMapper mapper = new ModelMapper();
 
-    public Usuario dtoAEntidad (UsuarioDTO dto) {
+    public Usuario DTOaEntidad (UsuarioDTO dto) {
         return Usuario.builder()
                 .usuario(dto.getUsuario())
                 .clave(dto.getClave())
@@ -29,13 +29,13 @@ public class UsuarioMapper {
                 .build();
     }
 
-    public List<Usuario> dtosAEntidades( List<UsuarioDTO> dtos) {
+    public List<Usuario> DTOaEntidades( List<UsuarioDTO> dtos) {
         return dtos.stream().map(entidades -> mapper.map(dtos, Usuario.class))
                 .collect(Collectors.toList());
     }
 
-    public List <UsuarioDTO> entidades (List<Usuario> entidades) {
-        return entidades.stream.map(dtos -> mapper.map(entidades, UsuarioDTO.class))
+    public List <UsuarioDTO> entidadesADTO (List<Usuario> entidades) {
+        return entidades.stream().map(dtos -> mapper.map(entidades, UsuarioDTO.class))
                 .collect(Collectors.toList());
     }
 
