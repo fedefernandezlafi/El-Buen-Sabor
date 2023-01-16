@@ -38,7 +38,7 @@ public class ArticuloManufacturadoServicio {
 
     }
 
-    public List<ArticuloManufacturadoDTO> listarArticulos(){
+    public List<ArticuloManufacturadoDTO> listarArticuloManufacturado(){
 
         List<ArticuloManufacturado> articulos = repo.findAll();
         List<ArticuloManufacturadoDTO> articulosDTO = mapper.entidadesADTO(articulos);

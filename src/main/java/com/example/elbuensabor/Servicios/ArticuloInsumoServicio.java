@@ -38,7 +38,7 @@ public class ArticuloInsumoServicio {
 
     }
 
-    public List<ArticuloInsumoDTO> listarArticulos(){
+    public List<ArticuloInsumoDTO> listarArticuloInsumo(){
 
         List<ArticuloInsumo> articulos = repo.findAll();
         List<ArticuloInsumoDTO> articulosDTO = mapper.entidadesADTO(articulos);
