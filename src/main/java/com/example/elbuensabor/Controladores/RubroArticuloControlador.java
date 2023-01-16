@@ -21,7 +21,6 @@ public class RubroArticuloControlador {
     @GetMapping
     public ResponseEntity<List<RubroArticuloDTO>> listarRubroArticulos () {
         return ResponseEntity.ok(rubroArticuloServicio.listarRubroArticulos());
-
     }
 
     @PostMapping("/crear")
