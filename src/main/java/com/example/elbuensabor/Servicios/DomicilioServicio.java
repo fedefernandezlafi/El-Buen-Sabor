@@ -19,7 +19,7 @@ public class DomicilioServicio {
     private DomicilioMapper mapper;
 
     public DomicilioDTO crearDomicilio(DomicilioDTO dto){
-        Domicilio domicilio = mapper.dtoAEntidad(dto);
+        Domicilio domicilio = mapper.DTOaEntidad(dto);
         repo.save(domicilio);
         DomicilioDTO domicilioCreado =  mapper.entidadADTO(domicilio);
         return domicilioCreado;
@@ -29,7 +29,7 @@ public class DomicilioServicio {
         Optional<Domicilio> domicilio= repo.findById(id);
         if(domicilio.isPresent()){
             Domicilio domicilioActualizado = domicilio.get();
-            domicilioActualizado = mapper.dtoAEntidad(dto);
+            domicilioActualizado = mapper.DTOaEntidad(dto);
             DomicilioDTO domicilioActualizadoDTO = mapper.entidadADTO(domicilioActualizado);
             return domicilioActualizadoDTO;
         }
