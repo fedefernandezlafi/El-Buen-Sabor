@@ -37,6 +37,6 @@ public class ArticuloManufacturadoDetalleControlador {
         }
         return ResponseEntity.ok(articuloManufacturadoDetalleServicio.actualizarArticuloManufacturadoDetalle(articuloManufacturadoDetalleDTO,id));
 
-
+        // chupa pinga
     }
 }
