@@ -19,7 +19,8 @@ public class DetalleFacturaControlador {
 
     @GetMapping
     public ResponseEntity<List<DetalleFacturaDTO>> listarDetalleFacturas () {
-        return ResponseEntity.ok(detalleFacturaServicio.listarDetalleFacturas());
+        return ResponseEntity.ok(detalleFacturaServicio
+                .listarDetalleFacturas());
 
     }
 

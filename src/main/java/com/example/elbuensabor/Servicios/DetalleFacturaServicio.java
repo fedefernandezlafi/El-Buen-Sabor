@@ -40,7 +40,7 @@ public class DetalleFacturaServicio {
 
     }
 
-    public List<DetalleFacturaDTO> listarFacturas(){
+    public List<DetalleFacturaDTO> listarDetalleFacturas(){
 
         List<DetalleFactura> facturas = repo.findAll();
         List<DetalleFacturaDTO> facturasDTO = mapper.entidadesADTO(facturas);

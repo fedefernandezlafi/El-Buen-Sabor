@@ -40,7 +40,7 @@ public class ArticuloManufacturadoDetalleServicio {
 
     }
 
-    public List<ArticuloManufacturadoDetalleDTO> listarArticulos(){
+    public List<ArticuloManufacturadoDetalleDTO> listarArticuloManufacturadoDetalle(){
 
         List<ArticuloManufacturadoDetalle> articulos = repo.findAll();
         List<ArticuloManufacturadoDetalleDTO> articulosDTO = mapper.entidadesADTO(articulos);
