@@ -36,7 +36,7 @@ public class DetallePedidoServicio {
 
     }
 
-    public List<DetallePedidoDTO> listarPedidos(){
+    public List<DetallePedidoDTO> listarPedidosDetalle(){
 
         List<DetallePedido> pedidos = repo.findAll();
         List<DetallePedidoDTO> pedidosDTO = mapper.entidadesADTO(pedidos);
