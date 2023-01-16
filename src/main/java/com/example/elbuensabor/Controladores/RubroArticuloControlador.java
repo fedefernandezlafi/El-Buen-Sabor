@@ -36,5 +36,5 @@ public class RubroArticuloControlador {
         return ResponseEntity.ok(rubroArticuloServicio.actualizarRubroArticulo(rubroArticuloDTO,id));
     }
 
-    // chupa pinga
+
 }

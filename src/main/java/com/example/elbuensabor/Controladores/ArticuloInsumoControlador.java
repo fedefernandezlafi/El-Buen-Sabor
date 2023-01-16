@@ -37,6 +37,7 @@ public class ArticuloInsumoControlador {
         }
         return ResponseEntity.ok(articuloInsumoServicio.actualizarArticuloInsumo(articuloInsumoDTO,id));
 
-        // chupa pinga
+
     }
+
 }
