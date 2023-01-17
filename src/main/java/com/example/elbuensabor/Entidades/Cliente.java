@@ -28,7 +28,7 @@ public class Cliente {
     private String telefono;
     @Column(name ="email", nullable = false)
     private String email;
-
-
+    @OneToOne (mappedBy = "cliente")
+    private Domicilio domicilio;
 
 }

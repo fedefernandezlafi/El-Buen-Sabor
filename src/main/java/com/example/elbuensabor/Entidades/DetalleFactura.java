@@ -23,4 +23,7 @@ public class DetalleFactura {
     private int cantidad;
     @Column(name ="subtotal", nullable = false)
     private double subTotal;
+    @OneToOne
+    @JoinColumn(name = "id_factura")
+    private Factura factura;
 }

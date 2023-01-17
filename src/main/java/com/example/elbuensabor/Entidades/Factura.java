@@ -28,11 +28,13 @@ public class Factura {
     private double montoDescuento;
     @Column (name = "forma_pago", nullable = false)
     private String formaPago;
-    @Column (name = "nro_Tarjeta", nullable = false)
+    @Column (name = "nro_tarjeta", nullable = false)
     private String nroTarjeta;
-    @Column (name = "total_Venta", nullable = false)
+    @Column (name = "total_venta", nullable = false)
     private double totalVenta;
-    @Column (name = "total_Costo", nullable = false)
+    @Column (name = "total_costo", nullable = false)
     private double totalCosto;
+    @OneToOne (mappedBy = "factura")
+    private DetalleFactura detalleFactura;
 
 }

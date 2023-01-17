@@ -33,4 +33,6 @@ public class Pedido {
 
     @Column (name = "tipo_envio", nullable = false)
     private String tipoEnvio;
+    @OneToOne (mappedBy = "pedido")
+    private DetallePedido detallePedido;
 }

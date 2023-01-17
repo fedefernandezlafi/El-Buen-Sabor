@@ -22,5 +22,8 @@ public class DetallePedido {
     private int cantidad;
     @Column(name ="subtotal", nullable = false)
     private double subTotal;
+    @OneToOne
+    @JoinColumn(name = "id_pedido")
+    private Pedido pedido;
 
 }

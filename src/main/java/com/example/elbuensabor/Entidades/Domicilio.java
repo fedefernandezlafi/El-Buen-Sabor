@@ -23,5 +23,8 @@ public class Domicilio {
     private int numero;
     @Column(name = "localidad", nullable = false)
     private String localidad;
+    @OneToOne
+    @JoinColumn (name = "id_cliente")
+    private Cliente cliente;
 
 }

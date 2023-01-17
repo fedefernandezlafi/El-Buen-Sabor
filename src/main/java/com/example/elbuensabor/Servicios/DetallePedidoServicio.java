@@ -7,9 +7,11 @@ import com.example.elbuensabor.Excepciones.ErrorServicio;
 import com.example.elbuensabor.Mappers.DetallePedidoMapper;
 import com.example.elbuensabor.Repositorios.DetallePedidoRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class DetallePedidoServicio {
 
     @Autowired
