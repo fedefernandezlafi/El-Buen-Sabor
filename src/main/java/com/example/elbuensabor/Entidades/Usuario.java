@@ -18,9 +18,11 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-
+    @Column (name = "usuario", nullable = false)
     private String usuario;
+    @Column (name = "clave", nullable = false)
     private String clave;
+    @Column (name = "rol", nullable = false)
     private String rol;
 
 

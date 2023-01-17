@@ -19,5 +19,6 @@ public class RubroGeneral {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    @Column (name = "denominacion", nullable = false)
     private String denominacion;
 }

@@ -5,10 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -20,9 +17,11 @@ public class Domicilio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column (name = "calle", nullable = false)
     private String calle;
+    @Column(name = "numero", nullable = false)
     private int numero;
+    @Column(name = "localidad", nullable = false)
     private String localidad;
 
 }
