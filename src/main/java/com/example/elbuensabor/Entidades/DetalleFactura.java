@@ -19,7 +19,8 @@ public class DetalleFactura {
     @Column(name = "id", nullable = false)
     private Long id;
 
-
+    @Column(name ="cantidad", nullable = false)
     private int cantidad;
+    @Column(name ="subtotal", nullable = false)
     private double subTotal;
 }

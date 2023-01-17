@@ -19,12 +19,21 @@ public class ArticuloInsumo {
     @Column(name = "id", nullable = false)
     private Long id;
 
+
+    @Column(name = "denominacion", nullable = false)
     private String denominacion;
+
+    @Column(name = "precio_compra", nullable = false)
     private double precioCompra;
+    @Column(name = "precio_venta", nullable = false)
     private double precioVenta;
+    @Column(name = "stock_actual", nullable = false)
     private double stockActual;
+    @Column(name = "stock_minimo", nullable = false)
     private double stockMinimo;
+    @Column(name = "unidad_medida", nullable = false)
     private String unidadMedida;
+    @Column(name = "es_insumo", nullable = false)
     private boolean esInsumo;
 
 
