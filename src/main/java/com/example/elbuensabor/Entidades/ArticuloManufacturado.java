@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -28,5 +29,11 @@ public class ArticuloManufacturado {
     private double precioVenta;
     @Column(name ="imagen", nullable = false)
     private String imagen;
+
+    @OneToMany(mappedBy = "articulo")
+    private List<ArticuloManufacturadoDetalle> detalle;
+    @ManyToOne()
+    @JoinColumn(name = "id_rubro_articulo")
+    private RubroArticulo rubroArticulo;
 
 }
