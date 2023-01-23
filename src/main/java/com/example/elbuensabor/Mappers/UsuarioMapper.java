@@ -17,7 +17,6 @@ public class UsuarioMapper {
         return Usuario.builder()
                 .usuario(dto.getUsuario())
                 .clave(dto.getClave())
-                .rol(dto.getRol())
                 .build();
     }
 
@@ -25,7 +24,6 @@ public class UsuarioMapper {
         return UsuarioDTO.builder()
                 .usuario(entidad.getUsuario())
                 .clave(entidad.getClave())
-                .rol(entidad.getRol())
                 .build();
     }
 

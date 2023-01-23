@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -25,5 +26,8 @@ public class DetallePedido {
     @OneToOne
     @JoinColumn(name = "id_pedido")
     private Pedido pedido;
+
+    @OneToMany(mappedBy = "detallePedido")
+    private List<ArticuloInsumo> insumos;
 
 }

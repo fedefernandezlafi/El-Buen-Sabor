@@ -36,6 +36,23 @@ public class ArticuloInsumo {
     @Column(name = "es_insumo", nullable = false)
     private boolean esInsumo;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_detalle")
+    private ArticuloManufacturadoDetalle detalle;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_rubro_articulo")
+    private RubroArticulo rubroArticulo;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_detalle_pedido")
+    private DetallePedido detallePedido;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_detalle_factura")
+    private DetallePedido detalleFactura;
+
+
 
 
 }

@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -20,6 +21,12 @@ public class RubroArticulo {
     private Long id;
     @Column (name = "denominacion", nullable = false)
     private String denominacion;
+
+    @OneToMany(mappedBy = "rubroArticulo")
+    private List<ArticuloManufacturado> articulos;
+
+    @OneToMany(mappedBy = "rubroArticulo")
+    private List<ArticuloInsumo> insumos;
 
 
 }

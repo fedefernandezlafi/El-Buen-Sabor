@@ -1,5 +1,7 @@
 package com.example.elbuensabor.Entidades;
 
+
+import com.example.elbuensabor.Utilidades.RolNombre;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,21 +15,16 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+public class Rol {
 
-public class DetalleFactura {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name ="cantidad", nullable = false)
-    private int cantidad;
-    @Column(name ="subtotal", nullable = false)
-    private double subTotal;
-    @OneToOne
-    @JoinColumn(name = "id_factura")
-    private Factura factura;
+    @Enumerated
+    private RolNombre rolNombre;
 
-    @OneToMany(mappedBy = "detalleFactura")
-    private List<ArticuloInsumo> insumos;
+    @OneToMany(mappedBy ="rol")
+    private List<Usuario> usuarios;
 }
