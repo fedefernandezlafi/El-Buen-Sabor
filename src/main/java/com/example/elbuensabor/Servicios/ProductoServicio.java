@@ -23,7 +23,7 @@ public class ProductoServicio {
     public List<ProductoDTO> crearListaProductos () {
 
         List<ProductoDTO> lista = new ArrayList<>();
-        List<ArticuloManufacturado> listaManufacturado = ariculoInsumoRepositorio.findAll();
+        List<ArticuloManufacturado> listaManufacturado = articuloInsumoRepositorio.findAll();
         List<ArticuloInsumo> listaInsumos = articuloInsumoRepositorio.findByEsInsumo(false);
         lista.addAll(mapper.insumosADTO(listaInsumos));
         lista.addAll(mapper.manufacturadosADTO(listaManufacturado));
