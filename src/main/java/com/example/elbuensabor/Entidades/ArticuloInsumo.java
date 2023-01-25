@@ -35,6 +35,8 @@ public class ArticuloInsumo {
     private String unidadMedida;
     @Column(name = "es_insumo", nullable = false)
     private boolean esInsumo;
+    @Column(name = "imagen", nullable = true)
+    private String imagen;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_detalle")

@@ -1,6 +1,7 @@
 package com.example.elbuensabor.DTOs;
 
 
+import com.example.elbuensabor.Entidades.Rol;
 import lombok.Builder;
 import lombok.Data;
 
@@ -21,5 +22,5 @@ public class UsuarioDTO {
 
     @NotNull(message = "El rol no puede ser nulo")
     @NotEmpty(message = "El rol no puede estar vacio")
-    private String rol;
+    private Rol rol;
 }
