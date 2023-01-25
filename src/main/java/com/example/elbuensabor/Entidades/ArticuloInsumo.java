@@ -50,7 +50,7 @@ public class ArticuloInsumo {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_detalle_factura")
-    private DetallePedido detalleFactura;
+    private DetalleFactura detalleFactura;
 
 
 

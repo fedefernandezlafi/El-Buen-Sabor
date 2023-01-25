@@ -1,5 +1,9 @@
 package com.example.elbuensabor.DTOs;
 
+import com.example.elbuensabor.Entidades.ArticuloManufacturadoDetalle;
+import com.example.elbuensabor.Entidades.DetalleFactura;
+import com.example.elbuensabor.Entidades.DetallePedido;
+import com.example.elbuensabor.Entidades.RubroArticulo;
 import lombok.Builder;
 import lombok.Data;
 
@@ -34,6 +38,5 @@ public class ArticuloInsumoDTO {
     @NotNull (message = "La unidad de medida no puede ser nula")
     @NotEmpty (message = "La unidad de medida no puede estar vacia")
     private String unidadMedida;
-
     private boolean esInsumo;
 }
