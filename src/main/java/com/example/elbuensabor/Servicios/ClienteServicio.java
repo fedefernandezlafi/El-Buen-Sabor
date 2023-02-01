@@ -6,12 +6,14 @@ package com.example.elbuensabor.Servicios;
 
 import com.example.elbuensabor.DTOs.ClienteDTO;
 import com.example.elbuensabor.Entidades.Cliente;
+import com.example.elbuensabor.Entidades.Pedido;
 import com.example.elbuensabor.Excepciones.ErrorServicio;
 import com.example.elbuensabor.Mappers.ClienteMapper;
 import com.example.elbuensabor.Repositorios.ClienteRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -48,5 +50,7 @@ public class ClienteServicio {
         List<ClienteDTO> clientesDTO = mapper.entidadesADTO(clientes);
         return clientesDTO;
     }
+
+
 
 }

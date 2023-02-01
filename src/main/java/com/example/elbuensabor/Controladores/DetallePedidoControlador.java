@@ -22,12 +22,12 @@ public class DetallePedidoControlador {
         return ResponseEntity.ok(detallePedidoServicio.listarPedidosDetalle());
 
     }
-
+/*
     @PostMapping("/crear")
     public ResponseEntity<DetallePedidoDTO> crear (@Valid @RequestBody DetallePedidoDTO detallePedidoDTO) {
         return ResponseEntity.ok(detallePedidoServicio.crearDetallePedido(detallePedidoDTO));
     }
-
+*/
     @PutMapping("/actualizar")
     public ResponseEntity<DetallePedidoDTO> actualizar (@Valid @RequestBody DetallePedidoDTO detallePedidoDTO, @PathVariable long id) throws ErrorServicio {
         if(detallePedidoServicio.actualizarDetallePedido(detallePedidoDTO, id) == null){

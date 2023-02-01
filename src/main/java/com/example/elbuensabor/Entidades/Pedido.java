@@ -23,16 +23,16 @@ public class Pedido {
     @CreationTimestamp
     @Column (name = "fecha", nullable = false)
     private LocalDate fecha;
-    @Column (name = "numero", nullable = false)
-    private int numero;
     @Column (name = "estado", nullable = false)
     private String estado;
     @UpdateTimestamp
     @Column (name = "hora_estimada_fin", nullable = false)
     private LocalDate horaEstimadaFin;
-
     @Column (name = "tipo_envio", nullable = false)
     private String tipoEnvio;
     @OneToOne (mappedBy = "pedido")
     private DetallePedido detallePedido;
+    @OneToOne
+    @JoinColumn (name = "id_cliente")
+    private Cliente cliente;
 }

@@ -24,8 +24,8 @@ public class PedidoControlador {
     }
 
     @PostMapping("/crear")
-    public ResponseEntity<PedidoDTO> crear (@Valid @RequestBody PedidoDTO pedidoDTO) {
-        return ResponseEntity.ok(pedidoServicio.crearPedido(pedidoDTO));
+    public ResponseEntity<PedidoDTO> crear (@Valid @RequestBody PedidoDTO pedidoDTO, @PathVariable long idCliente) {
+        return ResponseEntity.ok(pedidoServicio.crearPedido(pedidoDTO, idCliente));
     }
 
     @PutMapping("/actualizar")
@@ -34,7 +34,5 @@ public class PedidoControlador {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(pedidoServicio.actualizarPedido(pedidoDTO,id));
-
-
     }
 }

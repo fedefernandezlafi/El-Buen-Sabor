@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-
+import java.util.List;
 
 
 @Entity
@@ -26,9 +26,11 @@ public class Cliente {
     private String apellido;
     @Column(name ="telefono", nullable = false)
     private String telefono;
-    @Column(name ="email", nullable = false)
+    @Column(name ="email", nullable = false, unique = true)
     private String email;
     @OneToOne (mappedBy = "cliente")
     private Domicilio domicilio;
+    @OneToMany (mappedBy = "cliente")
+    private List<Pedido> pedidos;
 
 }

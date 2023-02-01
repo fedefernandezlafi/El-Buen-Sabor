@@ -10,7 +10,6 @@ import java.util.List;
 
 @Repository
 public interface ArticuloInsumoRepositorio extends JpaRepository<ArticuloInsumo , Long> {
-
     @Query(value = "SELECT * FROM articulo_insumo WHERE es_insumo = false", nativeQuery = true)
     public List<ArticuloInsumo> getByEsInsumoFalse ();
 

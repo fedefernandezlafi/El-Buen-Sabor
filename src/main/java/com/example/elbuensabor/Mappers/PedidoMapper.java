@@ -15,7 +15,6 @@ public class PedidoMapper {
     public Pedido DTOaEntidad (PedidoDTO dto) {
         return Pedido.builder()
                 .fecha(dto.getFecha())
-                .numero(dto.getNumero())
                 .estado(dto.getEstado())
                 .horaEstimadaFin(dto.getHoraEstimadaFin())
                 .tipoEnvio(dto.getTipoEnvio())
@@ -28,7 +27,6 @@ public class PedidoMapper {
                 .fecha(pedido.getFecha())
                 .horaEstimadaFin(pedido.getHoraEstimadaFin())
                 .tipoEnvio(pedido.getTipoEnvio())
-                .numero(pedido.getNumero())
                 .build() ;
     }
 

@@ -26,8 +26,9 @@ public class DetallePedido {
     @OneToOne
     @JoinColumn(name = "id_pedido")
     private Pedido pedido;
-
     @OneToMany(mappedBy = "detallePedido")
     private List<ArticuloInsumo> insumos;
+    @OneToMany(mappedBy = "detallePedido")
+    private List<ArticuloManufacturado> manufacturados;
 
 }
