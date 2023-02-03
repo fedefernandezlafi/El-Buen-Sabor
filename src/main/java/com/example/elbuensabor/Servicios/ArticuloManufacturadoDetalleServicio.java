@@ -27,7 +27,8 @@ public class ArticuloManufacturadoDetalleServicio {
         ArticuloManufacturadoDetalleDTO articuloCreado =  mapper.entidadADTO(articuloManufacturadoDetalle);
         return articuloCreado;
     }
-
+    // Aca controlar si no funciona bien, crear una nueva entidad e igualar al save de del actualizado. y devolver
+    // el un dto del actualizado.
     public ArticuloManufacturadoDetalleDTO actualizarArticuloManufacturadoDetalle(ArticuloManufacturadoDetalleDTO dto, Long id) throws ErrorServicio {
         Optional<ArticuloManufacturadoDetalle> articuloManufacturadoDetalle= repo.findById(id);
         if(articuloManufacturadoDetalle.isPresent()){
@@ -42,7 +43,6 @@ public class ArticuloManufacturadoDetalleServicio {
     }
 
     public List<ArticuloManufacturadoDetalleDTO> listarArticuloManufacturadoDetalle(){
-
         List<ArticuloManufacturadoDetalle> articulos = repo.findAll();
         List<ArticuloManufacturadoDetalleDTO> articulosDTO = mapper.entidadesADTO(articulos);
         return articulosDTO;

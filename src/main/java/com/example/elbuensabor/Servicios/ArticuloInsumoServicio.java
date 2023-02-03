@@ -38,14 +38,11 @@ public class ArticuloInsumoServicio {
                 throw  new ErrorServicio("No se encuentra el Id mencionado");
 
     }
-
     public List<ArticuloInsumoDTO> listarArticuloInsumo(){
 
         List<ArticuloInsumo> articulos = repo.findAll();
         List<ArticuloInsumoDTO> articulosDTO = mapper.entidadesADTO(articulos);
         return articulosDTO;
     }
-
-
 
 }

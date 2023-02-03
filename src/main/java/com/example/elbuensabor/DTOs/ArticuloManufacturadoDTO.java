@@ -10,12 +10,10 @@ import javax.validation.constraints.Size;
 @Data
 @Builder
 public class ArticuloManufacturadoDTO {
-
     @NotNull(message = "El tiempo estimado de cocina no puede ser nulo")
     @NotEmpty(message = "El tiempo estimado de cocina no puede estar vacio")
     @Size(min = 0, message = "El tiempo estimado de cocina no puede ser menor que 0")
     private int tiempoEstimadoCocina;
-
     @NotNull (message = "La denominacion no puede ser nula")
     @NotEmpty (message = "La denominacion no puede estar vacia")
     private String denominacion;

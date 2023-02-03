@@ -25,7 +25,7 @@ public class ArticuloManufacturadoControlador {
 
     }
 
-    @PostMapping("/registro")
+    @PostMapping("/crear")
     public ResponseEntity<ArticuloManufacturadoDTO> registro (@Valid @RequestBody ArticuloManufacturadoDTO articuloManufacturadoDTO) {
         return ResponseEntity.ok(articuloManufacturadoServicio.crearArticuloManufacturado(articuloManufacturadoDTO));
     }
