@@ -39,9 +39,7 @@ public class ArticuloManufacturadoDetalleServicio {
             return articuloActualizadoDTO;
         }
         throw  new ErrorServicio("No se encuentra el Id mencionado");
-
     }
-
     public List<ArticuloManufacturadoDetalleDTO> listarArticuloManufacturadoDetalle(){
         List<ArticuloManufacturadoDetalle> articulos = repo.findAll();
         List<ArticuloManufacturadoDetalleDTO> articulosDTO = mapper.entidadesADTO(articulos);
