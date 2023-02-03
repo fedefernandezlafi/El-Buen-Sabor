@@ -31,6 +31,7 @@ public class RubroGeneralServicio {
         if(rubroGeneral.isPresent()){
             RubroGeneral rubroGeneralActualizado = rubroGeneral.get();
             rubroGeneralActualizado = mapper.DTOaEntidad(dto);
+            repo.save(rubroGeneralActualizado);
             RubroGeneralDTO rubroGeneralActualizadoDTO = mapper.entidadADTO(rubroGeneralActualizado);
             return rubroGeneralActualizadoDTO;
         }

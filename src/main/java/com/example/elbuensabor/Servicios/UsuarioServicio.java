@@ -31,6 +31,7 @@ public class UsuarioServicio {
         if(usuario.isPresent()){
             Usuario usuarioActualizado = usuario.get();
             usuarioActualizado = mapper.DTOaEntidad(dto);
+            repo.save(usuarioActualizado);
             UsuarioDTO usuarioActualizadoDTO = mapper.entidadADTO(usuarioActualizado);
             return usuarioActualizadoDTO;
         }

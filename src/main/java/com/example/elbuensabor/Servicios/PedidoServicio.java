@@ -43,6 +43,7 @@ public class PedidoServicio {
         if(pedido.isPresent()){
             Pedido pedidoActualizado = pedido.get();
             pedidoActualizado = mapper.DTOaEntidad(dto);
+            repo.save(pedidoActualizado);
             PedidoDTO pedidoActualizadoDTO = mapper.entidadADTO(pedidoActualizado);
             return pedidoActualizadoDTO;
         }

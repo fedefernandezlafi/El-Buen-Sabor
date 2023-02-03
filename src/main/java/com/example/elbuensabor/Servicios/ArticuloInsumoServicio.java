@@ -31,6 +31,7 @@ public class ArticuloInsumoServicio {
         if(articuloInsumo.isPresent()){
             ArticuloInsumo articuloInsumoActualizado = articuloInsumo.get();// Instaciamos un articulo insumo nuevo y le ponemos los datos del que trajimos en la DB
             articuloInsumoActualizado = mapper.DTOaEntidad(dto);
+            repo.save(articuloInsumoActualizado);
             ArticuloInsumoDTO articuloActualizadoDTO = mapper.entidadADTO(articuloInsumoActualizado);// creamos un DTO con los datos actualizados para mostrarlo
             return articuloActualizadoDTO;
         }

@@ -37,6 +37,7 @@ public class ClienteServicio {
         if(cliente.isPresent()){
             Cliente clienteActualizado = cliente.get();
             clienteActualizado = mapper.DTOaEntidad(dto);
+            repo.save(clienteActualizado);
             ClienteDTO clienteActualizadoDTO = mapper.entidadADTO(clienteActualizado);
             return clienteActualizadoDTO;
         }

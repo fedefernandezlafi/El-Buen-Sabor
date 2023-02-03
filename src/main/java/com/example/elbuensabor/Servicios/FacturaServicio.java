@@ -31,6 +31,7 @@ public class FacturaServicio {
         if(factura.isPresent()){
             Factura facturaActualizado = factura.get();
             facturaActualizado = mapper.DTOaEntidad(dto);
+            repo.save(facturaActualizado);
             FacturaDTO facturaActualizadoDTO = mapper.entidadADTO(facturaActualizado);
             return facturaActualizadoDTO;
         }

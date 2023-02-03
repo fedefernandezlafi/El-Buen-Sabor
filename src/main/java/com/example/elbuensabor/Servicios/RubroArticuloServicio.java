@@ -31,6 +31,7 @@ public class RubroArticuloServicio {
         if(rubroArticulo.isPresent()){
             RubroArticulo rubroArticuloActualizado = rubroArticulo.get();
             rubroArticuloActualizado = mapper.DTOaEntidad(dto);
+            repo.save(rubroArticuloActualizado);
             RubroArticuloDTO rubroArticuloActualizadoDTO = mapper.entidadADTO(rubroArticuloActualizado);
             return rubroArticuloActualizadoDTO;
         }
