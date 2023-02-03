@@ -33,6 +33,7 @@ public class DetalleFacturaServicio {
         if(detalleFactura.isPresent()){
             DetalleFactura detalleFacturaActualizado = detalleFactura.get();
             detalleFacturaActualizado = mapper.DTOaEntidad(dto);
+            repo.save(detalleFacturaActualizado);
             DetalleFacturaDTO detalleFacturaActualizadoDTO = mapper.entidadADTO(detalleFacturaActualizado);
             return detalleFacturaActualizadoDTO;
         }

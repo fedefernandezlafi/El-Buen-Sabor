@@ -31,6 +31,7 @@ public class ArticuloManufacturadoServicio {
         if(articuloManufacturado.isPresent()){
             ArticuloManufacturado articuloManufacturadoActualizado = articuloManufacturado.get();
             articuloManufacturadoActualizado = mapper.DTOaEntidad(dto);
+            repo.save(articuloManufacturadoActualizado);
             ArticuloManufacturadoDTO articuloActualizadoDTO = mapper.entidadADTO(articuloManufacturadoActualizado);
             return articuloActualizadoDTO;
         }

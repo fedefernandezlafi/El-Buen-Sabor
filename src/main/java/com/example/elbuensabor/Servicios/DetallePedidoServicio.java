@@ -40,6 +40,7 @@ public class DetallePedidoServicio {
         if(detallePedido.isPresent()){
             DetallePedido detallePedidoActualizado = detallePedido.get();
             detallePedidoActualizado = mapper.DTOaEntidad(dto);
+            repo.save(detallePedidoActualizado);
             DetallePedidoDTO detallePedidoActualizadoDTO = mapper.entidadADTO(detallePedidoActualizado);
             return detallePedidoActualizadoDTO;
         }

@@ -32,6 +32,7 @@ public class DomicilioServicio {
         if(domicilio.isPresent()){
             Domicilio domicilioActualizado = domicilio.get();
             domicilioActualizado = mapper.DTOaEntidad(dto);
+            repo.save(domicilioActualizado);
             DomicilioDTO domicilioActualizadoDTO = mapper.entidadADTO(domicilioActualizado);
             return domicilioActualizadoDTO;
         }
