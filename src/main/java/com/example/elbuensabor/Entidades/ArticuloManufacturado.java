@@ -33,6 +33,9 @@ public class ArticuloManufacturado {
     @JoinColumn(name = "id_rubro_articulo")
     private RubroArticulo rubroArticulo;
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_rubro_general")
+    private RubroGeneral rubroGeneral;
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_detalle_pedido")
     private DetallePedido detallePedido;
 

@@ -15,7 +15,6 @@ import java.util.Optional;
 @Service
 public class ArticuloManufacturadoDetalleServicio {
 
-
     @Autowired
     private ArticuloManufacturadoDetalleRepositorio repo;
     @Autowired
