@@ -39,23 +39,23 @@ public class ArticuloInsumo {
     private String imagen;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_detalle")
+    @JoinColumn(name = "id_detalle", nullable = true)
     private ArticuloManufacturadoDetalle detalle;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_rubro_articulo")
+    @JoinColumn(name = "id_rubro_articulo", nullable = true)
     private RubroArticulo rubroArticulo;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_rubro_general")
+    @JoinColumn(name = "id_rubro_general", nullable = true)
     private RubroGeneral rubroGeneral;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_detalle_pedido")
+    @JoinColumn(name = "id_detalle_pedido", nullable = true)
     private DetallePedido detallePedido;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_detalle_factura")
+    @JoinColumn(name = "id_detalle_factura", nullable = true)
     private DetalleFactura detalleFactura;
 
 
