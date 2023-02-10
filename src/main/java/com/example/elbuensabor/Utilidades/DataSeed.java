@@ -32,33 +32,35 @@ public class DataSeed implements CommandLineRunner {
     @Autowired
     private ReadScript readScript;
 
-    @Value("Classpath: scripts/ARTICULOINSUMO-INSERT.SQL")
+
+
+    @Value("classpath:scripts/articuloinsumo.sql")
     private Resource resourceArticuloInsumo;
 
-    @Value("Classpath: scripts/ARTICULOMANUFACTURADO-INSERT.SQL")
+    @Value("classpath:scripts/articulomanufacturado.sql")
     private Resource resourceArticuloManufacturado;
 
-    @Value("Classpath: scripts/ROL-INSERT.SQL")
+    @Value("classpath:scripts/rol.sql")
     private Resource resourceRol;
 
-    @Value("Classpath: scripts/USUARIO-INSERT.SQL")
+    @Value("classpath:scripts/usuario.sql")
     private Resource resourceUsuario;
 
-    @Value("Classpath: scripts/RUBROARTICULO-INSERT.SQL")
+    @Value("classpath:scripts/rubroarticulo.sql")
     private Resource resourceRubroArticulo;
 
-    @Value("Classpath: scripts/RUBROGENERAL-INSERT.SQL")
+    @Value("classpath:scripts/rubrogeneral.sql")
     private Resource resourceRubroGeneral;
 
     @Override
     public void run(String... args) throws Exception {
 
-        //cargarRol();
-        //cargarUsuario();
-        //cargarRubroGeneral();
-        //cargarRubroArticulo();
-        //cargarArticuloInsumo();
-        //cargarArticuloManufacturado();
+        cargarRol();
+        cargarUsuario();
+        cargarRubroGeneral();
+        cargarRubroArticulo();
+        cargarArticuloInsumo();
+        cargarArticuloManufacturado();
 
     }
 
