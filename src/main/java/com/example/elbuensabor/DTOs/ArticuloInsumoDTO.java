@@ -1,19 +1,19 @@
 package com.example.elbuensabor.DTOs;
 
-import com.example.elbuensabor.Entidades.ArticuloManufacturadoDetalle;
-import com.example.elbuensabor.Entidades.DetalleFactura;
-import com.example.elbuensabor.Entidades.DetallePedido;
-import com.example.elbuensabor.Entidades.RubroArticulo;
+
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ArticuloInsumoDTO {
 
     @NotNull (message = "La denominacion no puede ser nula")
