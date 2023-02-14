@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class ProductoDTO {
     private String denominacion;
     private String imagen;
-    private String precioVenta;
+    private double precioVenta;
 }

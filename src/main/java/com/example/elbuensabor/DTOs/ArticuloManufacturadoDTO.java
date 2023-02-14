@@ -1,7 +1,9 @@
 package com.example.elbuensabor.DTOs;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -9,6 +11,8 @@ import javax.validation.constraints.Size;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ArticuloManufacturadoDTO {
     @NotNull(message = "El tiempo estimado de cocina no puede ser nulo")
     @NotEmpty(message = "El tiempo estimado de cocina no puede estar vacio")
