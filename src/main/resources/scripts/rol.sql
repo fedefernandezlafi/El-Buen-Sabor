@@ -5,7 +5,7 @@
  
  
  INSERT INTO ROL(ID,ROL_NOMBRE)
-      VALUES(1,"0"),
-            (2,"1"),
-            (3,"3"),
-            (4,"2");
+      VALUES(1,"ADMINISTRADOR"),
+            (2,"COCINERO"),
+            (3,"CLIENTE"),
+            (4,"CAJERO");

@@ -1,6 +1,7 @@
 package com.example.elbuensabor.Controladores;
 
 import com.example.elbuensabor.DTOs.UsuarioDTO;
+import com.example.elbuensabor.Entidades.Usuario;
 import com.example.elbuensabor.Excepciones.ErrorServicio;
 import com.example.elbuensabor.Servicios.UsuarioServicio;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-
 public class UsuarioMapper {
     private ModelMapper mapper = new ModelMapper();
 

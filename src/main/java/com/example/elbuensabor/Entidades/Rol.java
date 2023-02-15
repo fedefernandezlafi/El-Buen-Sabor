@@ -22,7 +22,7 @@ public class Rol {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private RolNombre rolNombre;
 
     @OneToMany(mappedBy ="rol")
