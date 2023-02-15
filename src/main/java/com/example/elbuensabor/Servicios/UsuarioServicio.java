@@ -40,7 +40,7 @@ public class UsuarioServicio {
     }
 
     public List<UsuarioDTO> listarUsuarios(){
-        List<Usuario> usuarios = repo.findAll();
+        List<Usuario> usuarios = repo.getUsuarios();
         List<UsuarioDTO> usuariosDTO = mapper.entidadesADTO(usuarios);
         return usuariosDTO;
     }
