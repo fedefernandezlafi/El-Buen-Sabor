@@ -1,5 +1,6 @@
 package com.example.elbuensabor.Utilidades;
 
+import com.example.elbuensabor.Entidades.Usuario;
 import com.example.elbuensabor.Repositorios.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -89,9 +90,31 @@ public class DataSeed implements CommandLineRunner {
     private void cargarUsuario() throws Exception {
 
         if(usuarioRepositorio.count()== 0){
-            readScript.dataSourceInitializer(resourceUsuario);
+            Usuario usuario = Usuario.builder()
+                    .usuario("admin")
+                    .clave("admin")
+                    .rol(rolRepositorio.getRolById(1l))
+                    .build();
+            usuarioRepositorio.save(usuario);
+            Usuario usuario2 = Usuario.builder()
+                    .usuario("cocinero")
+                    .clave("cocinero")
+                    .rol(rolRepositorio.getRolById(2l))
+                    .build();
+            usuarioRepositorio.save(usuario2);
+            Usuario usuario3 = Usuario.builder()
+                    .usuario("cliente")
+                    .clave("cliente")
+                    .rol(rolRepositorio.getRolById(3l))
+                    .build();
+            usuarioRepositorio.save(usuario3);
+            Usuario usuario4 = Usuario.builder()
+                    .usuario("cajero")
+                    .clave("cajero")
+                    .rol(rolRepositorio.getRolById(4l))
+                    .build();
+            usuarioRepositorio.save(usuario4);
         }
-
     }
     private void cargarRubroArticulo() throws Exception {
 

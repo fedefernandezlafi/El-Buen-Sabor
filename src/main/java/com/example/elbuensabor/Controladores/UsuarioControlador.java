@@ -19,11 +19,15 @@ public class UsuarioControlador {
     private UsuarioServicio usuarioServicio;
 
 
-@GetMapping
-    public ResponseEntity<List<UsuarioDTO> > listarUsuarios () {
+    @GetMapping
+    public ResponseEntity<List<UsuarioDTO> > listarUsuarios () throws Exception {
     return ResponseEntity.ok(usuarioServicio.listarUsuarios());
 
 }
+    @GetMapping ("/{id}")
+    public ResponseEntity<UsuarioDTO> buscarPorID (@PathVariable long id) throws Exception {
+        return ResponseEntity.ok(usuarioServicio.getById(id));
+    }
 
    @PostMapping("/registro")
     public ResponseEntity<UsuarioDTO> registro (@Valid @RequestBody UsuarioDTO usuarioDTO) {

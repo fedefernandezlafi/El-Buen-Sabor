@@ -26,5 +26,5 @@ public class UsuarioDTO {
 
     @NotNull(message = "El rol no puede ser nulo")
     @NotEmpty(message = "El rol no puede estar vacio")
-    private Rol rol;
+    private long rolId;
 }

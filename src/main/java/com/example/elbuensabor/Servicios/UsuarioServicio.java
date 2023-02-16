@@ -40,8 +40,13 @@ public class UsuarioServicio {
     }
 
     public List<UsuarioDTO> listarUsuarios(){
-        List<Usuario> usuarios = repo.getUsuarios();
+        List<Usuario> usuarios = repo.findAll();
         List<UsuarioDTO> usuariosDTO = mapper.entidadesADTO(usuarios);
         return usuariosDTO;
+    }
+
+    public UsuarioDTO getById(long id) {
+        Optional<Usuario> usuario = repo.findById(id);
+        return mapper.entidadADTO(usuario.get());
     }
 }

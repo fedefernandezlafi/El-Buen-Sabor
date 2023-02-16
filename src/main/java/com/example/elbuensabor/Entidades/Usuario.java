@@ -23,7 +23,7 @@ public class Usuario {
     private String usuario;
     @Column (name = "clave", nullable = false)
     private String clave;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "id_rol")
     private Rol rol;
 

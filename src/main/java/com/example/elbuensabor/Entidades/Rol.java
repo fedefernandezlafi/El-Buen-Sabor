@@ -25,6 +25,6 @@ public class Rol {
     @Enumerated(EnumType.STRING)
     private RolNombre rolNombre;
 
-    @OneToMany(mappedBy ="rol")
+    @OneToMany (mappedBy = "rol")
     private List<Usuario> usuarios;
 }
